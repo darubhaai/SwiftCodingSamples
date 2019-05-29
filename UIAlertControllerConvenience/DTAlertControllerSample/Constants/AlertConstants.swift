@@ -8,37 +8,37 @@
 
 import Foundation
 
-enum MyAlertType {
+enum AlertType {
     case dataLoss
     case sessionExpiry
     case noNetwork
     case taskCompletion
 }
 
-struct DataLossAlert: AlertContentProtocol {
+struct DataLossAlert: AlertProtocol {
     var title: String? { return "Would you like to continue?" }
     var message: String? { return "Your current will be lost."}
-    var defaultButtonTitle: String? { return "Proceed" }
-    var cancelButtonTitle: String? { return "Cancel" }
+    var actionTitle: String? { return "Proceed" }
+    var cancelTitle: String? { return "Cancel" }
 }
 
-struct SessionExpiryAlert: AlertContentProtocol {
+struct SessionExpiryAlert: AlertProtocol {
     var title: String? { return "Please login to Continue" }
     var message: String? { return "Your previous session is expired"}
-    var defaultButtonTitle: String? { return "Login" }
-    var cancelButtonTitle: String? { return "Cancel" }
+    var actionTitle: String? { return "Login" }
+    var cancelTitle: String? { return "Cancel" }
 }
 
-struct NoNetworkAlert: AlertContentProtocol {
+struct NoNetworkAlert: AlertProtocol {
     var title: String? { return "Network Connection Lost" }
-    var message: String? { return "Please Go to Settings->Networks to check your network status"}
-    var defaultButtonTitle: String? { return "Settings" }
-    var cancelButtonTitle: String? { return "Cancel" }
+    var message: String? { return "Could not connect to Internet. Please check your network settings"}
+    var actionTitle: String? { return "Settings" }
+    var cancelTitle: String? { return "Cancel" }
 }
 
-struct TaskCompletionAlert: AlertContentProtocol {
+struct TaskCompletionAlert: AlertProtocol {
     var title: String? { return "Task Completed" }
     var message: String? { return "Request task is successfully completed"}
-    var defaultButtonTitle: String? { return nil }
-    var cancelButtonTitle: String? { return "OK" }
+    var actionTitle: String? { return nil }
+    var cancelTitle: String? { return nil }
 }

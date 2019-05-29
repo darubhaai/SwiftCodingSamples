@@ -11,32 +11,41 @@ import UIKit
 
 extension UIAlertController {
     
+    // This constant is required to avoid presenting alert without any actions
     var defaultCancelbuttonTitle: String {
-        return "Cancel"
+        return "OK"
     }
-    //Default Action is
-    convenience init(alertType: MyAlertType,
-                     defaultAction: (() -> Void)? = nil,
+
+    /**
+    Convenience Initialiser for UIAlertController
+    - parameters:
+        - alertType: Type of the alert you are looking to present.
+        - defaultAction: Action for which you presented the alert for.
+        - cancelAction: Action on pressing cancellation button.
+
+    */
+
+    convenience init(alertType: AlertType,
+                     userAction: (() -> Void)? = nil,
                      cancelAction: (() -> Void)? = nil) {
         let alert = AlertFactory.alert(forType: alertType)
         self.init(title: alert.title,
                   message: alert.message,
                   preferredStyle: .alert)
-
-        let cancelButtontitle = alert.cancelButtonTitle ?? defaultCancelbuttonTitle
+        
+        let cancelButtontitle = alert.cancelTitle ?? defaultCancelbuttonTitle
         let cancelAlertAction = UIAlertAction(title: cancelButtontitle,
                                               style: .cancel) { (action) in
-            cancelAction?()
+                                                cancelAction?()
         }
         self.addAction(cancelAlertAction)
-
-        if let defaultActionTitle = alert.defaultButtonTitle {
+        
+        if let defaultActionTitle = alert.actionTitle {
             let defaultAlertAction = UIAlertAction(title: defaultActionTitle,
                                                    style: .default) { (action) in
-                defaultAction?()
+                                                    userAction?()
             }
             self.addAction(defaultAlertAction)
         }
     }
 }
-

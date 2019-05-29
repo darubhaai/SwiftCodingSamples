@@ -9,9 +9,9 @@
 import Foundation
 import UIKit
 
-protocol AlertContentProtocol {
+protocol AlertProtocol {
     var title: String? { get }
     var message: String? { get }
-    var defaultButtonTitle: String? { get }
-    var cancelButtonTitle: String? { get }
+    var actionTitle: String? { get }
+    var cancelTitle: String? { get }
 }

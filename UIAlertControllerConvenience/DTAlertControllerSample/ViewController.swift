@@ -15,34 +15,46 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func dataLossAlertTapped(_ sender: Any) {
-        let alert = UIAlertController(alertType: .dataLoss, defaultAction: {
-            print("======= Data Loss Alert Default Action")
+    func showDataLossAlert() {
+        UIApplication.shared.showAlert(ofType: .dataLoss, onViewController: self, userAction: {
+            print("======== Data Loss Alert Default Action Executed")
         })
-        present(alert, animated: true, completion: nil)
+    }
+
+    func showNoNetworkAlert() {
+        UIApplication.shared.showAlert(ofType: .noNetwork, onViewController: self, userAction: {
+            print("======== No Network Alert Default Action Executed")
+        })
+    }
+
+    func showSessionExpiryAlert() {
+        UIApplication.shared.showAlert(ofType: .sessionExpiry, onViewController: self, userAction: {
+            print("======== Session Expiry Alert Default Action Executed")
+        }, cancelAction : {
+            print("======== Session Expiry Alert Cancel Action Executed")
+        })
+    }
+
+    //Single Action Alert
+    func showTaskCompletionAlert() {
+        UIApplication.shared.showAlert(ofType: .taskCompletion, onViewController: self)
+    }
+
+    // MARK: IB Actions
+    @IBAction func dataLossAlertTapped(_ sender: Any) {
+        showDataLossAlert()
     }
 
     @IBAction func noNetworkAlertTapped(_ sender: Any) {
-        let alert = UIAlertController(alertType: .noNetwork, cancelAction: {
-            print("======= No Alert Cancel Action")
-        })
-        present(alert, animated: true, completion: nil)
+        showNoNetworkAlert()
     }
 
     @IBAction func sessionExpiryAlertTapped(_ sender: Any) {
-        let alert = UIAlertController(alertType: .sessionExpiry, defaultAction: {
-            print("======= Session Expiry Alert Default Action")
-        }, cancelAction: {
-            print("======= Session Expiry Alert Cancel Action")
-        })
-        present(alert, animated: true, completion: nil)
+        showSessionExpiryAlert()
     }
 
     @IBAction func taskCompletionAlert(_ sender: Any) {
-        let alert = UIAlertController(alertType: .taskCompletion, cancelAction: {
-            print("======= Task Completion Alert Cancel Action")
-        })
-        present(alert, animated: true, completion: nil)
+        showTaskCompletionAlert()
     }
 }
 

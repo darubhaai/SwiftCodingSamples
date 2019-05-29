@@ -9,15 +9,14 @@
 import Foundation
 
 class AlertFactory {
-    static func alert(forType alertType: MyAlertType) -> AlertContentProtocol {
-        var alert: AlertContentProtocol
+    static func alert(forType alertType: AlertType) -> AlertProtocol {
+        var alert: AlertProtocol
         switch alertType {
         case .dataLoss: alert = DataLossAlert()
         case .sessionExpiry: alert = SessionExpiryAlert()
         case .noNetwork: alert = NoNetworkAlert()
         case .taskCompletion: alert = TaskCompletionAlert()
         }
-        
         return alert
     }
 }
