@@ -23,11 +23,11 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O23-dv-JAf">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="56.5"/>
-                                        <color key="backgroundColor" red="0.52210458712820562" green="0.97680455450000003" blue="0.3864235222096537" alpha="0.73107394366197187" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.27284560796495311" green="0.97680455450000003" blue="0.0" alpha="0.73107394366197187" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                         <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                                         <state key="normal" title="Data Loss Alert">
-                                            <color key="titleColor" red="0.37622371274543009" green="0.0" blue="0.84510605569948183" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -40,11 +40,11 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="of9-VA-NZp">
                                         <rect key="frame" x="0.0" y="81.5" width="300" height="56"/>
-                                        <color key="backgroundColor" red="0.044966269007743614" green="0.85137400705451782" blue="0.97680455450000003" alpha="0.73107394366197187" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.044966269007743614" green="0.85137400705451782" blue="0.97680455450000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                         <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                                         <state key="normal" title="No Network Alert">
-                                            <color key="titleColor" red="0.37622371274543009" green="0.0" blue="0.84510605569948183" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -57,11 +57,11 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vo-IY-fne">
                                         <rect key="frame" x="0.0" y="162.5" width="300" height="56.5"/>
-                                        <color key="backgroundColor" red="0.97680455450000003" green="0.92836985565671137" blue="0.11201425428354218" alpha="0.6217814700704225" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.61378626169169093" green="1" blue="0.65581182232765101" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                         <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                                         <state key="normal" title="Session Expiry Alert">
-                                            <color key="titleColor" red="0.37622371274543009" green="0.0" blue="0.84510605569948183" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -74,11 +74,11 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="stE-FI-bFF">
                                         <rect key="frame" x="0.0" y="244" width="300" height="56"/>
-                                        <color key="backgroundColor" red="0.97680455450000003" green="0.92836985569999997" blue="0.1120142543" alpha="0.62178147009999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.97680455450000003" green="0.92836985569999997" blue="0.1120142543" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                         <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                                         <state key="normal" title="Task Completion Alert">
-                                            <color key="titleColor" red="0.37622371269999999" green="0.0" blue="0.84510605569999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">

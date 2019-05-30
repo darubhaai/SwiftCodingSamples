@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension UIApplication {
+extension UIViewController {
     /**
      Convenience Initialiser for UIAlertController
      - parameters:
@@ -24,7 +24,6 @@ extension UIApplication {
      */
 
     func showAlert(ofType alertType: AlertType,
-                   onViewController presenter: UIViewController,
                    animated: Bool = true,
                    completion: (()-> Void)? = nil,
                    userAction: (()->Void)? = nil,
@@ -33,7 +32,7 @@ extension UIApplication {
         let alertController = UIAlertController(alertType: alertType,
                                                 userAction: userAction,
                                                 cancelAction: cancelAction)
-        presenter.present(alertController,
+        present(alertController,
                           animated: animated,
                           completion: completion)
     }

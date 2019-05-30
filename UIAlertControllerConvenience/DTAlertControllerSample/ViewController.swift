@@ -15,21 +15,25 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    //Alert having userAction and completion action block
     func showDataLossAlert() {
-        UIApplication.shared.showAlert(ofType: .dataLoss, onViewController: self, userAction: {
+        showAlert(ofType: .dataLoss, completion: {
+            print("======== Data Loss Alert Successfully Presented")
+        }, userAction: {
             print("======== Data Loss Alert Default Action Executed")
         })
     }
 
     func showNoNetworkAlert() {
-        UIApplication.shared.showAlert(ofType: .noNetwork, onViewController: self, userAction: {
-            print("======== No Network Alert Default Action Executed")
+        showAlert(ofType: .noNetwork, userAction: {
+            print("======== No Network Alert User Action Executed")
         })
     }
 
+    //Alert having userAction and Cancel action block
     func showSessionExpiryAlert() {
-        UIApplication.shared.showAlert(ofType: .sessionExpiry, onViewController: self, userAction: {
-            print("======== Session Expiry Alert Default Action Executed")
+        showAlert(ofType: .sessionExpiry, userAction: {
+            print("======== Session Expiry Alert User Action Executed")
         }, cancelAction : {
             print("======== Session Expiry Alert Cancel Action Executed")
         })
@@ -37,7 +41,7 @@ class ViewController: UIViewController {
 
     //Single Action Alert
     func showTaskCompletionAlert() {
-        UIApplication.shared.showAlert(ofType: .taskCompletion, onViewController: self)
+        showAlert(ofType: .taskCompletion)
     }
 
     // MARK: IB Actions
